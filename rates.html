@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Rates - FTMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="firebase-setup.js"></script>
+</head>
+
+<body>
+
+<div style="text-align:center;padding:2rem;">
+  <h1><i class="fas fa-chart-bar"></i> Live Crop Rates</h1>
+  <p>Today's market prices vs Yesterday</p>
+</div>
+
+<div class="rates">
+  <div class="card">
+    <h3><i class="fas fa-sun"></i> Today</h3>
+    <div class="rate-item">
+      <span>Wheat</span><span class="price">₹2200 <i class="fas fa-arrow-up" style="color:#4caf50;"></i></span>
+    </div>
+    <div class="rate-item">
+      <span>Rice</span><span class="price">₹1800 <i class="fas fa-arrow-up" style="color:#4caf50;"></i></span>
+    </div>
+    <div class="rate-item">
+      <span>Cotton</span><span class="price">₹6000 <i class="fas fa-arrow-up" style="color:#4caf50;"></i></span>
+    </div>
+    <div class="rate-item">
+      <span>Maize</span><span class="price">₹1500 <i class="fas fa-arrow-up" style="color:#4caf50;"></i></span>
+    </div>
+    <div class="rate-item">
+      <span>Soybean</span><span class="price">₹4000 <i class="fas fa-arrow-up" style="color:#4caf50;"></i></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><i class="fas fa-moon"></i> Yesterday</h3>
+    <div class="rate-item">
+      <span>Wheat</span><span class="price">₹2100</span>
+    </div>
+    <div class="rate-item">
+      <span>Rice</span><span class="price">₹1700</span>
+    </div>
+    <div class="rate-item">
+      <span>Cotton</span><span class="price">₹5800</span>
+    </div>
+    <div class="rate-item">
+      <span>Maize</span><span class="price">₹1400</span>
+    </div>
+    <div class="rate-item">
+      <span>Soybean</span><span class="price">₹3900</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.rate-item {display:flex;justify-content:space-between;padding:1rem;border-bottom:1px solid #eee;}
+.rate-item:last-child {border-bottom:none;}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Driver Dashboard - FTMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadDriverRequests()">
+
+<script>
+let user = JSON.parse(localStorage.getItem("user"));
+if (!user || user.role !== "driver") location.href="login.html";
+</script>
+
+<div class="dashboard">
+  <div class="sidebar">
+    <h3><i class="fas fa-user"></i> Driver Dashboard</h3>
+    <button onclick="show('requests')"><i class="fas fa-list"></i> Pending Requests</button>
+    <button onclick="show('accepted')"><i class="fas fa-check-circle"></i> Accepted Requests</button>
+    <button onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </div>
+
+  <div class="main">
+    <div id="requests" class="section active">
+      <h2>Available Transport Requests</h2>
+      <div id="allRequests"></div>
+    </div>
+
+    <div id="accepted" class="section">
+      <h2>Your Accepted Requests</h2>
+      <div id="acceptedRequests"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="firebase-setup.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

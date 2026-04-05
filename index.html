@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FTMS - Farmer Transport Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+<script src="firebase-setup.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <h2><i class="fas fa-tractor spinning"></i> FTMS</h2>
+  <nav>
+    <a href="rates.html"><button style="background:transparent;color:white;border:1px solid white;">Live Rates</button></a>
+    <a href="login.html"><button>Login <i class="fas fa-sign-in-alt"></i></button></a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Revolutionize Your Crop Transport</h1>
+      <p class="hero-subtitle">Connect instantly with drivers, check live rates, and transport crops faster than ever.</p>
+      <div class="features">
+        <div class="feature"><i class="fas fa-bolt"></i><span>Instant Booking</span></div>
+        <div class="feature"><i class="fas fa-rupee-sign"></i><span>Best Rates</span></div>
+        <div class="feature"><i class="fas fa-mobile-alt"></i><span>Mobile Ready</span></div>
+      </div>
+      <div class="hero-buttons">
+        <a href="login.html?role=farmer" class="btn-primary">For Farmers</a>
+        <a href="login.html?role=driver" class="btn-secondary">For Drivers</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="farmer.jpg" alt="Happy farmers transporting crops">
+      <div class="img-overlay">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat">
+    <h3><i class="fas fa-truck"></i> 500+</h3>
+    <p>Active Drivers</p>
+  </div>
+  <div class="stat">
+    <h3><i class="fas fa-crop"></i> 10K+</h3>
+    <p>Requests Monthly</p>
+  </div>
+  <div class="stat">
+    <h3><i class="fas fa-users"></i> 2K+</h3>
+    <p>Happy Farmers</p>
+  </div>
+</section>
+
+<section class="boxes">
+  <a href="login.html?role=farmer" class="box">
+    <i class="fas fa-seedling big-icon"></i>
+    <h3>Farmer Portal</h3>
+    <p>Book trucks for your harvest easily</p>
+  </a>
+  <a href="login.html?role=driver" class="box">
+    <i class="fas fa-steering-wheel big-icon"></i>
+    <h3>Driver Portal</h3>
+    <p>Find nearby crop transport jobs</p>
+  </a>
+  <a href="rates.html" class="box">
+    <i class="fas fa-chart-line big-icon"></i>
+    <h3>Live Market Rates</h3>
+    <p>Check crop prices instantly</p>
+  </a>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h4><i class="fas fa-tractor"></i> FTMS</h4>
+      <p>Empowering farmers with smart transport solutions</p>
+    </div>
+    <div>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> ftms@email.com</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
